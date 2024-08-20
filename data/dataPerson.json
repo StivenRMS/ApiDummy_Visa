@@ -5,7 +5,7 @@
         "first_name": "Aggie",
         "last_name": "Shyres",
         "cvv": 7998,
-        "credit": "$37768.60",
+        "credit": "Q37768.60",
         "expiration_date": "2024-08",
         "dpi": 2882491615033,
         "state": true
@@ -15,7 +15,7 @@
         "first_name": "Brent",
         "last_name": "Bowers",
         "cvv": 1234,
-        "credit": "$28560.50",
+        "credit": "Q28560.50",
         "expiration_date": "2025-06",
         "dpi": 3124516225387,
         "state": true
@@ -25,7 +25,7 @@
         "first_name": "Cecilia",
         "last_name": "Knight",
         "cvv": 5678,
-        "credit": "$50345.00",
+        "credit": "Q50345.00",
         "expiration_date": "2024-11",
         "dpi": 1987654321098,
         "state": false
@@ -35,7 +35,7 @@
         "first_name": "Darius",
         "last_name": "Smith",
         "cvv": 4356,
-        "credit": "$12000.00",
+        "credit": "Q12000.00",
         "expiration_date": "2023-09",
         "dpi": 2048567312987,
         "state": true
@@ -45,7 +45,7 @@
         "first_name": "Emily",
         "last_name": "Johnson",
         "cvv": 8521,
-        "credit": "$34987.90",
+        "credit": "Q34987.90",
         "expiration_date": "2026-04",
         "dpi": 3542784910382,
         "state": false
@@ -55,7 +55,7 @@
         "first_name": "Felix",
         "last_name": "White",
         "cvv": 9876,
-        "credit": "$27480.00",
+        "credit": "Q27480.00",
         "expiration_date": "2025-01",
         "dpi": 4098526712387,
         "state": true
@@ -65,7 +65,7 @@
         "first_name": "Georgia",
         "last_name": "Black",
         "cvv": 7765,
-        "credit": "$45000.60",
+        "credit": "Q45000.60",
         "expiration_date": "2023-12",
         "dpi": 5087612398765,
         "state": true
@@ -75,7 +75,7 @@
         "first_name": "Henry",
         "last_name": "Green",
         "cvv": 3456,
-        "credit": "$32230.40",
+        "credit": "Q32230.40",
         "expiration_date": "2024-07",
         "dpi": 6219847635124,
         "state": false
@@ -85,7 +85,7 @@
         "first_name": "Ivy",
         "last_name": "Gray",
         "cvv": 2345,
-        "credit": "$39800.00",
+        "credit": "Q39800.00",
         "expiration_date": "2025-09",
         "dpi": 7198564312876,
         "state": true
@@ -95,7 +95,7 @@
         "first_name": "Jack",
         "last_name": "Blue",
         "cvv": 1543,
-        "credit": "$27689.50",
+        "credit": "Q27689.50",
         "expiration_date": "2026-03",
         "dpi": 8036543291876,
         "state": true
