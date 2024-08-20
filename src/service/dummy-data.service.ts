@@ -10,8 +10,8 @@ export class DummyDataService {
   private users = dataPerson.users;
   private transactions = dataTransaction.transactions;
 
-  getUserDataByDpi(dpi: number) {
-    return this.users.find(user => user.dpi === dpi);
+  getUserDataByTc(card_number: string) {
+    return this.users.find(user => user.card_number === card_number);
   }
 
   getTransactionByCardNumber(cardNumber: string) {
