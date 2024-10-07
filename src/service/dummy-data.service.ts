@@ -1,20 +1,59 @@
-import { Injectable } from '@nestjs/common';
-const dataPerson = require('../../data/dataPerson.json');
-const dataTransaction = require('../../data/dataTc.json');
-
+import { Injectable, NotFoundException } from '@nestjs/common';
+import * as fs from 'fs';
+import * as path from 'path';
 
 @Injectable()
 export class DummyDataService {
+  private filePath = path.join(__dirname, '../../data/clientes.json');
 
-
-  private users = dataPerson.users;
-  private transactions = dataTransaction.transactions;
-
-  getUserDataByTc(card_number: string) {
-    return this.users.find(user => user.card_number === card_number);
+  // Leer el archivo JSON usando require
+  private readData(): any[] {
+    return require(this.filePath);
   }
 
-  getTransactionByCardNumber(cardNumber: string) {
-    return this.transactions.find(transaction => transaction.card_number === cardNumber);
+  // Escribir datos al archivo JSON usando fs.writeFileSync
+  private writeData(data: any[]) {
+    fs.writeFileSync(this.filePath, JSON.stringify(data, null, 2));
   }
+
+  // Hace un cambio en el JSON de clientes según el número de DPI que se le pase, le cambia el estado de deudor a false
+  updateData(dpi: number) {
+    const data = this.readData(); // Leer los datos del archivo
+
+    // Buscar el cliente en la lista según el DPI
+    const client = data.find((client) => client.dpi === dpi);
+
+    // Si no se encuentra el cliente, lanzar una excepción
+    if (!client) {
+      throw new NotFoundException('Cliente no encontrado');
+    }
+
+    // Actualizar el estado de "esta_al_dia" y otros campos
+    client.esta_al_dia = true;
+    client.ultima_fecha_pago = new Date().toISOString().split('T')[0]; // Actualiza a la fecha actual
+    client.estado_cobro = "Pagado"; // Actualiza el estado del cobro
+
+    // Guardar los cambios en el archivo JSON
+    this.writeData(data);
+
+    // Devolver el cliente actualizado
+    return client;
+  }
+
+  getData() {
+    return this.readData();
+  }
+
+  //metodo para obtener los clientes que estan en estado deudor, pagados y todos
+  getDeudores() {
+    const data = this.readData();
+    return data.filter((client) => client.esta_al_dia === false);
+  }
+
+  getPagados() {
+    const data = this.readData();
+    return data.filter((client) => client.esta_al_dia === true);
+  }
+
+
 }
