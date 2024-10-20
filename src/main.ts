@@ -5,12 +5,15 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-   // Habilitar CORS
-   app.enableCors({
-    origin: 'http://localhost:3000', // Cambia esto al dominio desde el que quieres permitir solicitudes
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, // Permitir cookies y credenciales si es necesario
-  });
+   // Configurar CORS
+    app.enableCors({
+      origin: [
+        'https://cobradoresapp.netlify.app', // Dominio de producción
+        'http://localhost:3000' // Dominio de desarrollo, opcional si deseas mantener ambos
+      ],
+      methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+      credentials: true, // Permitir cookies y credenciales si es necesario
+    });
 
   const config = new DocumentBuilder()
     .setTitle('Dummy Data API')
