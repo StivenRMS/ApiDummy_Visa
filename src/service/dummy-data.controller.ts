@@ -24,6 +24,20 @@ export class DummyDataController {
     return this.dummyDataService.updateData(data.dpi);
   }
 
+  @Post('update-pago-parcial')
+  @ApiOperation({
+    summary: 'Pago parcial de credito',
+  })
+  @ApiResponse({
+    status: 200,
+    description: 'Datos de la transacción obtenidos exitosamente.',
+  })
+  @ApiResponse({ status: 404, description: 'Transacción no encontrada.' })
+  @HttpCode(200)
+  updatePagoParcial(@Body() data: PostPagoDto) {
+    return this.dummyDataService.updatePagoParcial(data.dpi, data.montoPago);
+  }
+  
   //endpoint tipo post para obtener datos de personas deudoras con parametro para diferenciar entre pagados y deudores
   @Post('get-clientes')
   @ApiOperation({ summary: 'Datos de clientes' })

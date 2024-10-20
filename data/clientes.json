@@ -11,7 +11,8 @@
     "fecha_pago": "2024-09-25",
     "ultima_fecha_pago": "2024-10-07",
     "esta_al_dia": true,
-    "estado_cobro": "Pagado"
+    "estado_cobro": "Pagado",
+    "tipo_credito": "Tarjeta de Crédito"
   },
   {
     "nombre_completo": "María García Martínez",
@@ -25,7 +26,8 @@
     "fecha_pago": "2024-10-01",
     "ultima_fecha_pago": "2024-10-01",
     "esta_al_dia": true,
-    "estado_cobro": "Pagado"
+    "estado_cobro": "Pagado",
+    "tipo_credito": "Préstamo Personal"
   },
   {
     "nombre_completo": "José Pérez Morales",
@@ -39,7 +41,8 @@
     "fecha_pago": "2024-09-28",
     "ultima_fecha_pago": "2024-09-20",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado"
+    "estado_cobro": "Retrasado",
+    "tipo_credito": "Crédito Hipotecario"
   },
   {
     "nombre_completo": "Ana López Velásquez",
@@ -53,7 +56,8 @@
     "fecha_pago": "2024-09-20",
     "ultima_fecha_pago": "2024-09-15",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado"
+    "estado_cobro": "Retrasado",
+    "tipo_credito": "Tarjeta de Crédito"
   },
   {
     "nombre_completo": "Luis Ramírez Rivera",
@@ -67,7 +71,8 @@
     "fecha_pago": "2024-10-05",
     "ultima_fecha_pago": "2024-09-25",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado"
+    "estado_cobro": "Retrasado",
+    "tipo_credito": "Crédito Vehicular"
   },
   {
     "nombre_completo": "Juana González Díaz",
@@ -81,7 +86,8 @@
     "fecha_pago": "2024-09-30",
     "ultima_fecha_pago": "2024-09-20",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado"
+    "estado_cobro": "Retrasado",
+    "tipo_credito": "Préstamo Personal"
   },
   {
     "nombre_completo": "Fernando Torres Mejía",
@@ -95,7 +101,8 @@
     "fecha_pago": "2024-09-22",
     "ultima_fecha_pago": "2024-09-15",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado"
+    "estado_cobro": "Retrasado",
+    "tipo_credito": "Crédito Hipotecario"
   },
   {
     "nombre_completo": "Gloria Castillo Rivas",
@@ -109,7 +116,8 @@
     "fecha_pago": "2024-09-15",
     "ultima_fecha_pago": "2024-09-10",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado"
+    "estado_cobro": "Retrasado",
+    "tipo_credito": "Crédito Vehicular"
   },
   {
     "nombre_completo": "Juan Carlos Domínguez",
@@ -123,7 +131,8 @@
     "fecha_pago": "2024-09-26",
     "ultima_fecha_pago": "2024-09-20",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado"
+    "estado_cobro": "Retrasado",
+    "tipo_credito": "Tarjeta de Crédito"
   },
   {
     "nombre_completo": "Verónica Sánchez Herrera",
@@ -137,7 +146,8 @@
     "fecha_pago": "2024-09-18",
     "ultima_fecha_pago": "2024-09-15",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado"
+    "estado_cobro": "Retrasado",
+    "tipo_credito": "Préstamo Personal"
   },
   {
     "nombre_completo": "Alberto Méndez Ruiz",
@@ -151,7 +161,8 @@
     "fecha_pago": "2024-09-24",
     "ultima_fecha_pago": "2024-09-20",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado"
+    "estado_cobro": "Retrasado",
+    "tipo_credito": "Crédito Hipotecario"
   },
   {
     "nombre_completo": "Lucía Fuentes Padilla",
@@ -165,7 +176,8 @@
     "fecha_pago": "2024-09-29",
     "ultima_fecha_pago": "2024-09-20",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado"
+    "estado_cobro": "Retrasado",
+    "tipo_credito": "Préstamo Personal"
   },
   {
     "nombre_completo": "Mario Ortiz Calderón",
@@ -179,7 +191,8 @@
     "fecha_pago": "2024-09-27",
     "ultima_fecha_pago": "2024-09-20",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado"
+    "estado_cobro": "Retrasado",
+    "tipo_credito": "Crédito Vehicular"
   },
   {
     "nombre_completo": "Rosa Ramos Villanueva",
@@ -193,7 +206,8 @@
     "fecha_pago": "2024-10-03",
     "ultima_fecha_pago": "2024-09-25",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado"
+    "estado_cobro": "Retrasado",
+    "tipo_credito": "Tarjeta de Crédito"
   },
   {
     "nombre_completo": "Miguel Angel López",
@@ -207,66 +221,72 @@
     "fecha_pago": "2024-10-02",
     "ultima_fecha_pago": "2024-09-20",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado"
+    "estado_cobro": "Retrasado",
+    "tipo_credito": "Préstamo Personal"
   },
   {
     "nombre_completo": "Carlos Esteban Martínez",
-    "deuda_total": 3500.00,
-    "cuota_mes": 350.00,
-    "mora": 25.00,
+    "deuda_total": 3500,
+    "cuota_mes": 350,
+    "mora_tardanza": 25,
     "direccion": "Aldea Las Palmas, Jutiapa, Guatemala",
     "sexo": "Masculino",
-    "numero_telefono": "+502 4567 8899",
+    "telefono": "+502 4567 8899",
     "dpi": 2748923115029,
     "fecha_pago": "2024-09-25",
-    "esta_al_dia": false
+    "esta_al_dia": false,
+    "tipo_credito": "Crédito Hipotecario"
   },
   {
     "nombre_completo": "Andrea Sofía Rosales",
-    "deuda_total": 5000.00,
-    "cuota_mes": 500.00,
-    "mora": 50.00,
+    "deuda_total": 5000,
+    "cuota_mes": 500,
+    "mora_tardanza": 50,
     "direccion": "Colonia Los Álamos, Jutiapa, Guatemala",
     "sexo": "Femenino",
-    "numero_telefono": "+502 4789 6654",
+    "telefono": "+502 4789 6654",
     "dpi": 2945627815030,
     "fecha_pago": "2024-09-20",
-    "esta_al_dia": false
+    "esta_al_dia": false,
+    "tipo_credito": "Préstamo Personal"
   },
   {
     "nombre_completo": "Luis Alberto Fernández",
-    "deuda_total": 4100.00,
-    "cuota_mes": 410.00,
-    "mora": 30.00,
+    "deuda_total": 4100,
+    "cuota_mes": 410,
+    "mora_tardanza": 30,
     "direccion": "Barrio El Centro, Jutiapa, Guatemala",
     "sexo": "Masculino",
-    "numero_telefono": "+502 4875 3214",
+    "telefono": "+502 4875 3214",
     "dpi": 2678453215031,
     "fecha_pago": "2024-09-30",
-    "esta_al_dia": false
+    "esta_al_dia": false,
+    "tipo_credito": "Crédito Vehicular"
   },
   {
     "nombre_completo": "Gabriela María Escobar",
-    "deuda_total": 2700.00,
-    "cuota_mes": 270.00,
-    "mora": 20.00,
+    "deuda_total": 2700,
+    "cuota_mes": 270,
+    "mora_tardanza": 20,
     "direccion": "Aldea Santa Inés, Jutiapa, Guatemala",
     "sexo": "Femenino",
-    "numero_telefono": "+502 4672 9988",
+    "telefono": "+502 4672 9988",
     "dpi": 2398745615032,
     "fecha_pago": "2024-10-01",
-    "esta_al_dia": false
+    "esta_al_dia": false,
+    "tipo_credito": "Préstamo Personal"
   },
   {
     "nombre_completo": "Jorge Enrique Ramírez",
-    "deuda_total": 5300.00,
-    "cuota_mes": 530.00,
-    "mora": 40.00,
+    "deuda_total": 5300,
+    "cuota_mes": 530,
+    "mora_tardanza": 40,
     "direccion": "Caserío Los Cedros, Jutiapa, Guatemala",
     "sexo": "Masculino",
-    "numero_telefono": "+502 4998 4433",
+    "telefono": "+502 4998 4433",
     "dpi": 2987452315033,
     "fecha_pago": "2024-09-28",
-    "esta_al_dia": false
+    "esta_al_dia": false,
+    "tipo_credito": "Tarjeta de Crédito"
   }
 ]

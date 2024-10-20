@@ -40,6 +40,29 @@ export class DummyDataService {
     return client;
   }
 
+  updatePagoParcial(dpi: number, montoPago: number) {
+    const data = this.readData(); // Leer los datos del archivo
+    const client = data.find((client) => client.dpi === dpi);
+    
+    if (!client) {
+      throw new NotFoundException('Cliente no encontrado');
+    }
+  
+    client.deuda_total = Math.max(0, client.deuda_total - montoPago); // Restar y asegurarse de que no sea negativo
+    client.ultima_fecha_pago = new Date().toISOString().split('T')[0]; // Actualizar la última fecha de pago
+  
+    if (client.deuda_total === 0) {
+      client.estado_cobro = 'Pagado';
+      client.esta_al_dia = true;
+    } else {
+      client.estado_cobro = 'Parcialmente Pagado';
+      client.esta_al_dia = false;
+    }
+
+    this.writeData(data);
+    return client;
+  }
+  
   getData() {
     return this.readData();
   }

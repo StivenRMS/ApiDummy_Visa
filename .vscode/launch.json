@@ -1,15 +1,33 @@
 {
-    // Use IntelliSense para saber los atributos posibles.
-    // Mantenga el puntero para ver las descripciones de los existentes atributos.
-    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Iniciar Chrome para localhost",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}"
-        }
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch NestJS App",
+        "runtimeExecutable": "npm",
+        "runtimeArgs": [
+          "run",
+          "start:debug"
+        ],
+        "port": 9229,
+        "skipFiles": ["<node_internals>/**"],
+        "restart": true,
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "sourceMaps": true,
+        "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+      },
+      {
+        "type": "node",
+        "request": "attach",
+        "name": "Attach to NestJS",
+        "port": 9229,
+        "address": "localhost",
+        "restart": false,
+        "protocol": "inspector",
+        "skipFiles": ["<node_internals>/**"]
+      }
     ]
-}
+  }
+  
