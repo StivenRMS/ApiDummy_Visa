@@ -39,9 +39,9 @@
     "telefono": "+502 53123458",
     "dpi": "4561237890303",
     "fecha_pago": "2024-09-28",
-    "ultima_fecha_pago": "2024-09-20",
+    "ultima_fecha_pago": "2024-10-24",
     "esta_al_dia": false,
-    "estado_cobro": "Retrasado",
+    "estado_cobro": "Parcialmente Pagado",
     "tipo_credito": "Crédito Hipotecario"
   },
   {

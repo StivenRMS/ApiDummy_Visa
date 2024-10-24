@@ -1,8 +1,9 @@
-import { HttpCode,Controller, Post, Body, Get } from '@nestjs/common';
+import { HttpCode,Controller, Post, Body, Get , Query, NotFoundException} from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { DummyDataService } from './dummy-data.service';
-import { PostPagoDto } from 'src/post-pago';
+import { PostPagoDto, dpiDto } from 'src/post-pago';
 import { clientesDto } from 'src/get-clientes';
+import { stat } from 'fs';
 
 
 @Controller('data')
@@ -65,5 +66,20 @@ export class DummyDataController {
     }
     
   }
+
+@Get('get-cliente')
+@ApiOperation({ summary: 'Datos de un cliente' })
+@ApiResponse({
+  status: 200,
+  description: 'Datos obtenidos exitosamente.',
+})
+@ApiResponse({ status: 404, description: 'Cliente no encontrado.' })
+async getCliente(@Query() data: dpiDto) {
+  const client = this.dummyDataService.getCliente(data.dpi);
+  if (!client) {
+    throw new NotFoundException('Cliente no encontrado');
+  }
+  return client;
+}
   
 }

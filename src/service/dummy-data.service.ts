@@ -31,7 +31,7 @@ export class DummyDataService {
     // Actualizar el estado de "esta_al_dia" y otros campos
     client.esta_al_dia = true;
     client.ultima_fecha_pago = new Date().toISOString().split('T')[0]; // Actualiza a la fecha actual
-    client.estado_cobro = "Pagado"; // Actualiza el estado del cobro
+    client.estado_cobro = 'Pagado'; // Actualiza el estado del cobro
 
     // Guardar los cambios en el archivo JSON
     this.writeData(data);
@@ -40,17 +40,24 @@ export class DummyDataService {
     return client;
   }
 
+  // dummyDataService.ts
+  getCliente(dpi: number) {
+    const data = this.readData();
+    const client = data.find((client) => client.dpi === dpi);
+    return client || null;
+  }
+
   updatePagoParcial(dpi: number, montoPago: number) {
     const data = this.readData(); // Leer los datos del archivo
     const client = data.find((client) => client.dpi === dpi);
-    
+
     if (!client) {
       throw new NotFoundException('Cliente no encontrado');
     }
-  
+
     client.deuda_total = Math.max(0, client.deuda_total - montoPago); // Restar y asegurarse de que no sea negativo
     client.ultima_fecha_pago = new Date().toISOString().split('T')[0]; // Actualizar la última fecha de pago
-  
+
     if (client.deuda_total === 0) {
       client.estado_cobro = 'Pagado';
       client.esta_al_dia = true;
@@ -62,7 +69,7 @@ export class DummyDataService {
     this.writeData(data);
     return client;
   }
-  
+
   getData() {
     return this.readData();
   }
@@ -77,6 +84,4 @@ export class DummyDataService {
     const data = this.readData();
     return data.filter((client) => client.esta_al_dia === true);
   }
-
-
 }

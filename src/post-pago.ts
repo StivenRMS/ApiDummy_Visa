@@ -14,3 +14,11 @@ export class PostPagoDto {
   })
   montoPago?: number;
 }
+
+export class dpiDto {
+  @ApiProperty({
+    description: 'Número de dpi del usuario',
+    example: 2882491615033,
+  })
+  dpi: number;
+}
